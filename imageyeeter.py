@@ -76,3 +76,4 @@ for item in images:
 print("the program found " + str(unsharp) + " blurry images and found " + str(sharp) +" sharp images")
 print("if you want to delete these images run the program again but press y on deletion prompt")
 
+exit = input("press enter to exit")
