@@ -6,7 +6,6 @@ user = getpass.getuser()
 
 print(os.listdir("/media/"+user))
 devicename = input("what's the name of your usb device? : ")
-#devicename = "usb16"
 workingdirectory = "/media/"+user+"/"+devicename+"/pictures/"
 print("current working directory = " + workingdirectory)
 kernel = (5, 5) #for pictures between 900p and 1080p
