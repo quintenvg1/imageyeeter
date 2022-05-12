@@ -1,11 +1,13 @@
 import os
 import cv2
 
-
-print("imageyeeter windows version")
-devicename = input("what's the driveletter of your usb device? : ")
-workingdirectory = devicename+":/pictures/"
 kernel = (5, 5) #for pictures between 900p and 1080p
+print("imageyeeter windows version")
+usbdevice = input("gebruik je een usb stick met een pictures directory? Y/N")
+if(usbdevice == "y"):
+    devicename = input("what's the driveletter of your usb device? : ")
+    workingdirectory = devicename+":/pictures/"
+
 
 manual_entry = input("enter a working directory manually? y/n")
 if(manual_entry == "y"):
@@ -14,7 +16,7 @@ if(manual_entry == "y"):
 print("current working directory = " + workingdirectory)
 
 threshhold = 60 #value between 0 and 500 the lower the value the less sharp pictures can be before being deleted default 60
-override_treshhold = input("override treshhold? y/n ")
+override_treshhold = input("override treshhold? default = 60 y/n ")
 if(override_treshhold == "y"):
     threshhold = int(input("give a threshhold value between 0 and 500 default = 60. \r\n lower values = more kept but less sharper pictures, higher values = less kept but sharper pictures \r\n"))
 
